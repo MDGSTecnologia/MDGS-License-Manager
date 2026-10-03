@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/mdgs_black"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="14dp"
+        android:paddingTop="18dp"
+        android:paddingRight="14dp"
+        android:paddingBottom="32dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="118dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="MDGS Tecnologia"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_mdgs" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:letterSpacing="0.08"
+            android:text="MDGS LICENSE MANAGER"
+            android:textColor="@color/mdgs_gold"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_status"
+            android:paddingLeft="12dp"
+            android:paddingTop="5dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="5dp"
+            android:text="@string/release_label"
+            android:textColor="@color/mdgs_teal"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtClientKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="CHAVE CLIENTE ATUAL: -"
+            android:textColor="@color/mdgs_teal"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="10dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/mdgs_teal"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_status"
+            android:gravity="center"
+            android:padding="9dp"
+            android:text="PRONTO"
+            android:textColor="@color/mdgs_muted"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_panel"
+            android:orientation="vertical">
+
+            <TextView style="@style/MDGSSectionTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="CLIENTES" />
+            <EditText android:id="@+id/editSearch" style="@style/MDGSField" android:hint="BUSCAR EMPRESA / CPF/CNPJ / SOFTWARE" android:imeOptions="actionSearch" android:singleLine="true" />
+            <Button android:id="@+id/btnSearch" style="@style/MDGSButton" android:background="@drawable/btn_gold" android:text="BUSCAR" android:textColor="@color/mdgs_black" />
+            <Spinner android:id="@+id/spinnerCompanies" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="8dp" android:background="@drawable/bg_field" android:paddingLeft="10dp" android:paddingRight="10dp" android:popupBackground="@color/mdgs_panel_2" />
+            <TextView android:id="@+id/txtCompanySummary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:lineSpacingExtra="2dp" android:textColor="@color/mdgs_muted" android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_panel"
+            android:orientation="vertical">
+
+            <TextView style="@style/MDGSSectionTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="CADASTRO / LICENÇA" />
+            <EditText android:id="@+id/editName" style="@style/MDGSField" android:hint="EMPRESA / IDENTIFICAÇÃO" android:singleLine="true" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="CPF/CNPJ" android:textColor="@color/mdgs_muted" android:textSize="11sp" android:textStyle="bold" />
+            <EditText android:id="@+id/editCnpj" style="@style/MDGSField" android:hint="CPF/CNPJ" android:inputType="number" android:imeOptions="actionNext" android:maxLength="18" android:singleLine="true" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="SOFTWARE LICENCIADO" android:textColor="@color/mdgs_muted" android:textSize="11sp" android:textStyle="bold" />
+            <Spinner android:id="@+id/spinnerSoftware" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="5dp" android:background="@drawable/bg_field" android:paddingLeft="10dp" android:paddingRight="10dp" android:popupBackground="@color/mdgs_panel_2" />
+            <Button android:id="@+id/btnManagePrograms" style="@style/MDGSButton" android:background="@drawable/btn_dark" android:text="GERENCIAR PROGRAMAS REGISTRADOS" android:textColor="@color/mdgs_teal" />
+
+            <EditText android:id="@+id/editLogin" style="@style/MDGSField" android:hint="LOGIN" android:singleLine="true" />
+            <EditText android:id="@+id/editPassword" style="@style/MDGSField" android:hint="SENHA (VAZIO = MANTER A ATUAL)" android:inputType="textPassword" android:singleLine="true" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="PERFIL" android:textColor="@color/mdgs_muted" android:textSize="11sp" android:textStyle="bold" />
+            <Spinner android:id="@+id/spinnerProfile" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="5dp" android:background="@drawable/bg_field" android:paddingLeft="10dp" android:paddingRight="10dp" android:popupBackground="@color/mdgs_panel_2" />
+
+            <EditText android:id="@+id/editValidity" style="@style/MDGSField" android:clickable="true" android:focusable="false" android:hint="VALIDADE" />
+            <EditText android:id="@+id/editDeviceLimit" style="@style/MDGSField" android:hint="LIMITE DE DISPOSITIVOS" android:inputType="number" android:singleLine="true" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/btnNew" style="@style/MDGSButton" android:layout_width="0dp" android:layout_marginRight="4dp" android:layout_weight="1" android:background="@drawable/btn_gold" android:text="NOVO" android:textColor="@color/mdgs_black" />
+                <Button android:id="@+id/btnSave" style="@style/MDGSButton" android:layout_width="0dp" android:layout_marginLeft="4dp" android:layout_weight="1" android:background="@drawable/btn_green" android:text="SALVAR" android:textColor="@color/mdgs_white" />
+            </LinearLayout>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="RENOVAR LICENÇA" android:textColor="@color/mdgs_muted" android:textSize="11sp" android:textStyle="bold" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/btnRenew30" style="@style/MDGSButton" android:layout_width="0dp" android:layout_marginRight="4dp" android:layout_weight="1" android:background="@drawable/btn_dark" android:text="+30 DIAS" android:textColor="@color/mdgs_white" />
+                <Button android:id="@+id/btnRenew60" style="@style/MDGSButton" android:layout_width="0dp" android:layout_marginLeft="4dp" android:layout_weight="1" android:background="@drawable/btn_dark" android:text="+60 DIAS" android:textColor="@color/mdgs_white" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/btnRenew90" style="@style/MDGSButton" android:layout_width="0dp" android:layout_marginRight="4dp" android:layout_weight="1" android:background="@drawable/btn_dark" android:text="+90 DIAS" android:textColor="@color/mdgs_white" />
+                <Button android:id="@+id/btnRenewYear" style="@style/MDGSButton" android:layout_width="0dp" android:layout_marginLeft="4dp" android:layout_weight="1" android:background="@drawable/btn_dark" android:text="+1 ANO" android:textColor="@color/mdgs_white" />
+            </LinearLayout>
+
+            <Button android:id="@+id/btnToggleLicense" style="@style/MDGSButton" android:background="@drawable/btn_gold" android:text="BLOQUEAR LICENÇA" android:textColor="@color/mdgs_black" />
+            <Button android:id="@+id/btnDeleteCompany" style="@style/MDGSButton" android:background="@drawable/btn_red" android:text="EXCLUIR CLIENTE" android:textColor="@color/mdgs_white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_panel"
+            android:orientation="vertical">
+
+            <TextView style="@style/MDGSSectionTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="DISPOSITIVOS VINCULADOS" />
+            <Spinner android:id="@+id/spinnerDevices" android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/bg_field" android:paddingLeft="10dp" android:paddingRight="10dp" android:popupBackground="@color/mdgs_panel_2" />
+            <TextView android:id="@+id/txtDeviceSummary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:lineSpacingExtra="2dp" android:textColor="@color/mdgs_muted" android:textSize="12sp" />
+            <Button android:id="@+id/btnAddDevice" style="@style/MDGSButton" android:background="@drawable/btn_teal" android:text="ADICIONAR DISPOSITIVO" android:textColor="@color/mdgs_black" />
+            <Button android:id="@+id/btnToggleDevice" style="@style/MDGSButton" android:background="@drawable/btn_gold" android:text="BLOQUEAR / DESBLOQUEAR DISPOSITIVO" android:textColor="@color/mdgs_black" />
+            <Button android:id="@+id/btnDeleteDevice" style="@style/MDGSButton" android:background="@drawable/btn_red" android:text="EXCLUIR DISPOSITIVO" android:textColor="@color/mdgs_white" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/bg_panel" android:orientation="vertical">
+            <TextView style="@style/MDGSSectionTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="BANCO REMOTO" />
+            <Button android:id="@+id/btnValidateToken" style="@style/MDGSButton" android:background="@drawable/btn_red" android:text="VALIDAR TOKEN GITHUB" android:textColor="@color/mdgs_white" />
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:gravity="center" android:text="MDGS TECNOLOGIA • GERENCIAMENTO DE LICENÇAS" android:textColor="@color/mdgs_muted" android:textSize="10sp" />
+    </LinearLayout>
+</ScrollView>
