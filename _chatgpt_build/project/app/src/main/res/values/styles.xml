@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MDGS" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowBackground">@color/mdgs_black</item>
+        <item name="android:colorAccent">@color/mdgs_teal</item>
+        <item name="android:navigationBarColor">@color/mdgs_black</item>
+        <item name="android:statusBarColor">@color/mdgs_black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="MDGSSectionTitle">
+        <item name="android:textColor">@color/mdgs_teal</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="MDGSField">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:background">@drawable/bg_field</item>
+        <item name="android:paddingLeft">14dp</item>
+        <item name="android:paddingRight">14dp</item>
+        <item name="android:textColor">@color/mdgs_white</item>
+        <item name="android:textColorHint">@color/mdgs_muted</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="MDGSButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:letterSpacing">0.06</item>
+    </style>
+</resources>
