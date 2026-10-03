@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mdgs_black">#050706</color>
+    <color name="mdgs_black_2">#090D0C</color>
+    <color name="mdgs_panel">#101716</color>
+    <color name="mdgs_panel_2">#151E1C</color>
+    <color name="mdgs_teal">#00F0C0</color>
+    <color name="mdgs_teal_dark">#00A884</color>
+    <color name="mdgs_teal_soft">#2A6F62</color>
+    <color name="mdgs_gold">#FFB81C</color>
+    <color name="mdgs_gold_dark">#B97900</color>
+    <color name="mdgs_red">#D83A3A</color>
+    <color name="mdgs_green">#168A55</color>
+    <color name="mdgs_white">#F6FAF9</color>
+    <color name="mdgs_muted">#9DB0AC</color>
+    <color name="mdgs_line">#263A36</color>
+</resources>
