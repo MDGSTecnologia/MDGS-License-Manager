@@ -1,0 +1,43 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'br.com.mdgstecnologia.licensemanager'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'br.com.mdgstecnologia.licensemanager'
+        minSdk 26
+        targetSdk 35
+        versionCode 10104
+        versionName '1.1'
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            jniDebuggable false
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    packagingOptions {
+        resources {
+            excludes += ['/META-INF/{AL2.0,LGPL2.1}']
+        }
+    }
+}
+
+androidComponents {
+    beforeVariants(selector().withBuildType('debug')) { variantBuilder ->
+        variantBuilder.enable = false
+    }
+}
